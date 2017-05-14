@@ -14,5 +14,9 @@
 
 
 <ion-content padding>
-
+	<ion-list>
+    <ion-item *ngFor="let item of items" (click)="itemClicked($event,item)">
+      <p>{{item.name }}</p>
+    </ion-item>
+    </ion-list>
 </ion-content>
