@@ -45,7 +45,7 @@ import { CadastroProfessorPage } from '../pages/cadastro-professor/cadastro-prof
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })
 export class AppModule {}

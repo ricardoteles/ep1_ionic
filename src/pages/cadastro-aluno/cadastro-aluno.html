@@ -15,27 +15,28 @@
 
 <ion-content padding>
 
-<form>
+<form [formGroup]="cadastro" (ngSubmit)="postRequest()" >
     <ion-list>
     	<ion-item>
         <ion-label floating>Nome</ion-label>
-        <ion-input type="text" name="nome"></ion-input>
+        <ion-input type="text" name="nome" formControlName="nome"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label floating>Número Usp</ion-label>
-        <ion-input type="text" name="nusp"></ion-input>
+        <ion-input type="text" name="nusp" formControlName="nusp"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label floating>Senha</ion-label>
-        <ion-input type="password" name="senha"></ion-input>
+        <ion-input type="password" name="senha" formControlName="senha"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label floating>Confirmação da Senha</ion-label>
-        <ion-input type="password" name="cnfsenha"></ion-input>
+        <ion-input type="password" name="cnfsenha" formControlName="cnfsenha"></ion-input>
       </ion-item>
+      <button ion-button full block [disabled]="cadastro.invalid">Salvar</button>
     </ion-list> 
 
-    <button ion-button full block >Salvar</button>
+    <!-- <button ion-button full block (click)="postRequest()">Salvar</button> -->
   </form>
 
 </ion-content>
